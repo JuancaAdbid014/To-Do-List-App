@@ -31,3 +31,19 @@ Podemos extender un ORM SQL: https://flask-sqlalchemy.palletsprojects.com/en/2.x
 Usaremos Firestore: NoSQL - Grupo de colecciones - documentos->row, field->Column, document ID-> primary key
 
 Tutorial flask-SQLAchemy: https://platzi.com/tutoriales/1540-flask/7112-conectando-aplicacion-con-base-de-datos-relacional/
+
+<h1>Configuración de Google Cloud SDK</h1>
+
+Ahora vamos a instalar el Google Cloud SDK. Simplemente debemos descargar un ejecutable desde alguno de estos enlaces:
+
+Para Windows dirígete a https://cloud.google.com/sdk/docs/quickstart-windows
+Para MacOS dirígete a link https://cloud.google.com/sdk/docs/quickstart-macos
+Para Linux dirígete a https://cloud.google.com/sdk/docs/quickstart-linux
+
+Una vez que corrimos el instalador, podemos verificar que instalamos correctamente el SDK corriendo en una terminal el siguiente comando:
+
+which gcloud
+Ahora inicializamos gcloud y hacemos login con:
+
+gcloud init
+gcloud auth login
