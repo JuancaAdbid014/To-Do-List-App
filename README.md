@@ -36,9 +36,9 @@ Tutorial flask-SQLAchemy: https://platzi.com/tutoriales/1540-flask/7112-conectan
 
 Ahora vamos a instalar el Google Cloud SDK. Simplemente debemos descargar un ejecutable desde alguno de estos enlaces:
 
-Para Windows dirígete a https://cloud.google.com/sdk/docs/quickstart-windows
-Para MacOS dirígete a link https://cloud.google.com/sdk/docs/quickstart-macos
-Para Linux dirígete a https://cloud.google.com/sdk/docs/quickstart-linux
+ - Para Windows dirígete a https://cloud.google.com/sdk/docs/quickstart-windows
+ - Para MacOS dirígete a link https://cloud.google.com/sdk/docs/quickstart-macos
+ - Para Linux dirígete a https://cloud.google.com/sdk/docs/quickstart-linux
 
 Una vez que corrimos el instalador, podemos verificar que instalamos correctamente el SDK corriendo en una terminal el siguiente comando:
 
