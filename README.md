@@ -48,7 +48,7 @@ Ahora inicializamos gcloud y hacemos login con:
 gcloud init
 gcloud auth login
 
-<h1Implementación de Firestore</h1>
+<h1>Implementación de Firestore</h1>
 
 Comunicación con la base de datos
 
