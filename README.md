@@ -47,3 +47,35 @@ Ahora inicializamos gcloud y hacemos login con:
 
 gcloud init
 gcloud auth login
+
+<h1Implementación de Firestore</h1>
+
+Comunicación con la base de datos
+
+Crear proyecto en GCP e iniciar una BD en firestore.
+instalar el SDK de gcloud
+hacer login desde la terminal: gcloud auth login
+hacer login application-default: gcloud auth application-default login
+inicializar: gcloud init
+seguir las instrucciones y elegir el proyecto que creamos en GCP.
+ambiente de gcloud configurado y conectado a nuestra aplicación.
+
+Para los que tengan el error al ejecutar por la conexión a firestore queda con añadir la variable al entorno
+
+Unix Bash:
+export GOOGLE_CLOUD_PROJECT=‘EL_ID_DE_TU_PROEYCTO’
+
+Win CMD:
+set GOOGLE_CLOUD_PROJECT=‘EL_ID_DE_TU_PROEYCTO’
+
+Powershell:
+$env:GOOGLE_CLOUD_PROJECT=‘EL_ID_DE_TU_PROEYCTO’
+
+Para ver el proyecto en ejecución
+
+gcloud config list
+
+Para configurar el proyecto
+
+gcloud  config set project "id del proyecto"
+
