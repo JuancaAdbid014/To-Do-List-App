@@ -79,3 +79,82 @@ Para configurar el proyecto
 
 gcloud  config set project "id del proyecto"
 
+<h1>Autenticación de usuarios: Login</h1>
+
+https://flask-login.readthedocs.io/en/latest/
+https://drive.google.com/drive/folders/1ICKi5POR7ZAvhlY05j35OrNbjYfQvAQ3?usp=sharing
+
+<h1>Autenticación de usuarios: Logout</h1>
+
+<h1>Signup</h1>
+
+app\view.py
+
+aqui un poco mas de informacion acerca de Werkzeug.security:
+
+Python werkzeug.security.generate_password_hash()
+
+Si después de hashear el pwd ya no pueden entrar con su usuario, tienen que usar un check_password_hash en el metodo del login
+
+@auth.route('/login', methods=['GET', 'POST'])
+def login():
+    login_form = LoginForm()
+    context = {
+        'login_form': LoginForm()
+    }
+
+    if login_form.validate_on_submit():
+        username = login_form.username.data
+        password = login_form.password.data
+        user_doc = get_user(username)
+
+        if user_doc.to_dict() is not None:
+            
+            if check_password_hash(user_doc.to_dict()['password'], password):
+                user_data = UserData(username,password)
+                user = UserModel(user_data)
+
+                login_user(user)
+                flash('Well come again')
+                redirect(url_for('hello'))
+            else:
+                flash('wrong password >:(')
+        else:
+            flash('user does not exist =/')
+        return redirect(url_for('index'))
+    
+    return render_template('login.html', **context)
+    
+
+<h1>Agregar tareas</h1>
+
+![image](https://user-images.githubusercontent.com/94714288/144225853-7e004653-f86e-4e59-9dd6-0fcc35271ce0.png)
+
+<h1>Eliminar tareas</h1>
+
+main.py, macros.html, hello.html, firestore_services.py
+
+Si cambian el macros.html por:
+
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% macro render_todo(todo, delete_form) %}
+    <li class="list-group-item">
+        <span class="badge">
+            {%if todo.to_dict().done %}
+                Done
+            {% else %}
+                To do
+            {% endif %}
+        </span>
+        Descripción: {{ todo.to_dict().description }}
+
+        {{ wtf.quick_form(delete_form, action=url_for('delete', todo_id=todo.id)) }}
+    </li>
+{% endmacro %}
+En vez de False ó True les mostrará To do ó Done
+
+![image](https://user-images.githubusercontent.com/94714288/144231295-ccf694db-d260-4f8e-8598-7a79212e3308.png)
+
+<h1>Editar tareas</h1>
+
