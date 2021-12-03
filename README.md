@@ -186,3 +186,9 @@ https://platzi.com/clases/fundamentos-google/
 ERROR: (gcloud.app.deploy) Error Response: [7] Access Not Configured. Cloud Build has not been used in project platzi-flask-333714 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=platzi-flask-333714 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
 
 Deploy on Heroku: https://dev.to/techparida/how-to-deploy-a-flask-app-on-heroku-heb
+
+<h1>Conclusiones</h1>
+
+rep : 
+ - https://github.com/innacroft/flask
+ - https://github.com/eocode/Flask_TaskApp
