@@ -171,3 +171,18 @@ Ejemplo:
 ![image](https://user-images.githubusercontent.com/94714288/144599649-09f7efda-3939-427a-a24f-e79b236c6aed.png)
 
 <h1>Deploy a producción con App Engine</h1>
+
+https://console.cloud.google.com/appengine
+https://platzi.com/clases/fundamentos-google/
+
+1.Crear archivo app.yaml —> runtime: python37
+2.Crear nuevo proyecto en gcloud para producción
+3.Cambiar el proyecto actual de gcloud : gcloud init
+4.Ejecutar el comando: gcloud app deploy app.yaml
+5.Activar firestore en gcloud
+6.Ejecutar el comando: gcloud app browse
+7. Ingresar a la ruta generada por gcloud y probar la app.
+
+ERROR: (gcloud.app.deploy) Error Response: [7] Access Not Configured. Cloud Build has not been used in project platzi-flask-333714 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=platzi-flask-333714 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+
+Deploy on Heroku: https://dev.to/techparida/how-to-deploy-a-flask-app-on-heroku-heb
