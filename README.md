@@ -158,3 +158,16 @@ En vez de False ó True les mostrará To do ó Done
 
 <h1>Editar tareas</h1>
 
+Si en macros.html a cada form del estilo botón le agregan la clase botón se va a ver mejor.
+
+Ejemplo:
+
+<button type="button" class="btn btn-light">
+            {{ wtf.quick_form(delete_form, action=url_for('delete', todo_id=todo.id)) }}
+        </button>
+        <button type="button" class="btn btn-light">
+        {{ wtf.quick_form(update_form, action=url_for('update', todo_id=todo.id, done=todo.to_dict().done)) }}
+        </button>
+![image](https://user-images.githubusercontent.com/94714288/144599649-09f7efda-3939-427a-a24f-e79b236c6aed.png)
+
+<h1>Deploy a producción con App Engine</h1>
